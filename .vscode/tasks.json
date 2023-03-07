@@ -11,8 +11,10 @@
 				"${file}",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
+				"-std=c++23",
+				"-Mmodules",
 				"-I",
-				"${vcpkgRoot}/x64-windows/include"
+				"${vcpkgRoot}\\installed\\x64-windows\\include"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
