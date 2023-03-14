@@ -1,6 +1,6 @@
 // Copyright (c) 2015
 // Author: Chrono Law
-#include <std.hpp>
+#include <iostream>
 using namespace std;
 
 //#define BOOST_DATE_TIME_POSIX_TIME_STD_CONFIG
@@ -14,11 +14,11 @@ using namespace boost::posix_time;
 void case1()
 {
     date d(2014,11,3);
-    date_facet* dfacet = new date_facet("%Yå¹´%mæœˆ%dæ—¥");
+    date_facet* dfacet = new date_facet("%YÄê%mÔÂ%dÈÕ");
     cout.imbue(locale(cout.getloc(), dfacet));
     cout << d << endl;
 
-    time_facet *tfacet = new time_facet("%Yå¹´%mæœˆ%dæ—¥%Hç‚¹%Måˆ†%S%Fç§’");
+    time_facet *tfacet = new time_facet("%YÄê%mÔÂ%dÈÕ%Hµã%M·Ö%S%FÃë");
     cout.imbue(locale(cout.getloc(), tfacet));
     cout << ptime(d , hours(21) + minutes(50) + millisec(100)) << endl;
 

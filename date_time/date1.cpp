@@ -1,10 +1,6 @@
-// Copyright (c) 2015
-// Author: Chrono Law
 #include <iostream>
-using namespace std;
-
-//#define DATE_TIME_NO_DEFAULT_CONSTRUCTOR
 #include <boost/date_time/gregorian/gregorian.hpp>
+using namespace std;
 using namespace boost::gregorian;
 
 //////////////////////////////////////////
