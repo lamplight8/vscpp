@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 #include <boost/date_time/gregorian/gregorian.hpp>
 using namespace std;
 using namespace boost::gregorian;
@@ -7,12 +8,12 @@ using namespace boost::gregorian;
 
 void case1()
 {
-    date d1;
+    date d1; //无效日期
     date d2(2010,1,1);
     date d3(2000, Jan , 1);
     date d4(d2);
 
-    assert(d1 == date(not_a_date_time));
+    assert(d1 == date(not_a_date_time)); //无效日期
     assert(d2 == d4);
     assert(d3 <  d4);
 }
@@ -25,9 +26,9 @@ void case2()
     date d2 ( from_string("2015/1/1") );
     date d3 = from_undelimited_string("20011118") ;
 
-    cout << d1 << d2 << d3 << endl;
+    cout << d1 << ", " << d2 << ", " << d3 << endl;
 
-    cout << day_clock::local_day()    << endl;
+    cout << day_clock::local_day() << endl;
     cout << day_clock::universal_day() << endl;
 
 }
@@ -41,13 +42,13 @@ void case3()
     date d4(max_date_time);
     date d5(min_date_time);
 
-    cout << d1 << d2 << d3 << d4 << d5 << endl;
+    cout << d1 << ", " << d2 << ", "  << d3 << ", "  << d4 << ", "  << d5 << endl;
 
     try
     {
-        //date d1(1399,12,1);
+        date d1(1399,12,1);
         //date d2(10000,1,1);
-        date d3(2017,2,29);
+        //date d3(2017,2,29);
     }
     catch(std::exception& e)
     {
@@ -58,32 +59,30 @@ void case3()
 //////////////////////////////////////////
 void case4()
 {
-    date d(2017,6,1);
-    assert(d.year()  == 2017);
-    assert(d.month() == 6);
-    assert(d.day()   == 1);
+    date d(2023,3,15);
+    assert(d.year()  == 2023);
+    assert(d.month() == 3);
+    assert(d.day()   == 15);
 
     date::ymd_type ymd =  d.year_month_day();
-    assert(ymd.year    == 2017);
-    assert(ymd.month   == 6);
-    assert(ymd.day     == 1);
+    assert(ymd.year    == 2023);
+    assert(ymd.month   == 3);
+    assert(ymd.day     == 15);
 
     cout << d.day_of_week() << endl;
     cout << d.day_of_year() << endl;
-    assert(d.end_of_month() == date(2017,6,30));
+    assert(d.end_of_month() == date(2023,3,31));
 
-    cout << date(2015,1,10).week_number() << endl;
-    cout << date(2016,1,10).week_number()  << endl;
-    cout << date(2017,1,10).week_number()  << endl;
+    cout << date(2023,3,15).week_number() << endl;
+    cout << date(2023,3,21).week_number()  << endl;
+    cout << date(2023,3,25).week_number()  << endl;
 
     assert(date(pos_infin).is_infinity()  );
     assert(date(pos_infin).is_pos_infinity() );
     assert(date(neg_infin).is_neg_infinity() );
     assert(date(not_a_date_time).is_not_a_date() );
     assert(date(not_a_date_time).is_special() );
-    assert(!date(2017,5,31).is_special() );
-
-
+    assert(!date(2023,1,1).is_special() );
 }
 
 //////////////////////////////////////////
@@ -96,10 +95,9 @@ void case5()
     cout << to_iso_extended_string(d) << endl;
     cout << d << endl;
 
-    //cout << "input date:";
-    //cin >>d;
-    //cout << d;
-
+    cout << "input date:";
+    cin >>d;
+    cout << d << endl;
 }
 
 //////////////////////////////////////////
@@ -112,7 +110,6 @@ void case6()
 
     date d2 = date_from_tm(t);
     assert(d == d2);
-
 }
 
 //////////////////////////////////////////
@@ -204,15 +201,15 @@ void case9()
 
 int main()
 {
-    case1();
-    case2();
-    case3();
-    case4();
-    case5();
+    //case1();
+    //case2();
+    //case3();
+    //case4();
+    //case5();
     case6();
-    case7();
-    case8();
-    case9();
+    //case7();
+    //case8();
+    //case9();
 }
 
 
