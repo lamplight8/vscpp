@@ -1,4 +1,4 @@
-#include <cstring>
+#include <string>
 using namespace std;
 
 class AirlineTicket
@@ -6,8 +6,8 @@ class AirlineTicket
 public:
 	double calculatePriceInDollars();
 	
-	std::string getPassengerName();
-	void setPassengerName(std::string name);
+	string getPassengerName();
+	void setPassengerName(string name);
 
 	int getNumberOfMiles();
 	void setNumberOfMiles(int miles);
@@ -16,7 +16,7 @@ public:
 	void setHasEliteSuperRewardsStatus(bool status);
 
 private:
-	std::string m_passengerName{ "Unknown Passenger" };
+	string m_passengerName{ "Unknown Passenger" };
 	int m_numberOfMiles{ 0 };
 	bool m_hasEliteSuperRewardsStatus{ false };
 };

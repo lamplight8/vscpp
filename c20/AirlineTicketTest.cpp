@@ -1,5 +1,6 @@
 #include <iostream>
-#include "AirlineTicket.hpp"
+#include <format>
+#include "AirlineTicket.h"
 
 using namespace std;
 
@@ -9,5 +10,5 @@ int main()
 	myTicket.setPassengerName("Sherman T. Socketwrench");
 	myTicket.setNumberOfMiles(700);
 	double cost{ myTicket.calculatePriceInDollars() };
-	cout << "This ticket will cost $" << cost << endl;
+	cout << format("This ticket will cost ${}", cost)<< endl;
 }

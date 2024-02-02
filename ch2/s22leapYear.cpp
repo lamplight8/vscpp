@@ -1,7 +1,6 @@
 //输入一个年份，判断是否闰年
 #include <iostream>
-#include <boost/format.hpp>
-using namespace boost;
+#include <format>
 using namespace std;
 
 int main()
@@ -12,9 +11,9 @@ int main()
     cin >> year;
 
     if (IsLeapYear(year))
-        cout << format("%d is leap year.\n") % year;
+        cout << format("{} is leap year.\n", year);
     else
-        cout << format("%d is not leap year.\n") % year;
+        cout << format("{} is not leap year.\n", year);
 
 	return 0;
 }
