@@ -12,9 +12,7 @@
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-std=c++23",
- 				"-Mmodules",
-				"-I",
-				"${vcpkgRoot}\\**"
+ 				"-Mmodules"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
