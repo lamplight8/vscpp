@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe 生成活动文件",
+			"label": "C/C++: g++.exe build active file",
 			"command": "D:\\msys64\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
@@ -12,9 +12,9 @@
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe",
 				"-std=c++23",
-				"-Mmodules",
+ 				"-Mmodules",
 				"-I",
-				"${vcpkgRoot}\\installed\\x64-windows\\include"
+				"${vcpkgRoot}/**"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -26,7 +26,7 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "编译器: D:\\msys64\\mingw64\\bin\\g++.exe"
+			"detail": "compiler: D:\\msys64\\mingw64\\bin\\g++.exe"
 		}
 	]
 }

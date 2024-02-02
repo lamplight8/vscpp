@@ -1,7 +1,3 @@
 {
-    "files.associations": {
-        "iostream": "cpp",
-        "compare": "cpp",
-        "sstream": "cpp"
-    }
+    "cmake.configureOnOpen": false
 }
