@@ -1,6 +1,7 @@
 {
     "cmake.configureOnOpen": false,
     "files.associations": {
-        "format": "cpp"
+        "format": "cpp",
+        "string_view": "cpp"
     }
 }
