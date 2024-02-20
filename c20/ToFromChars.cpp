@@ -12,6 +12,7 @@ int main()
 	{
 		// to_chars() without structured binding.
 		string out(BufferSize, ' '); // A string of BufferSize space characters.
+
 		auto result{ to_chars(out.data(), out.data() + out.size(), 12345) };
 		if (result.ec == errc{}) 
 		{ 

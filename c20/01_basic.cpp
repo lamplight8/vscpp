@@ -1,4 +1,4 @@
-ï»¿//01_basic.cpp
+//01_basic.cpp
 #include <iostream>
 #include <string>
 #include <format>
@@ -11,5 +11,6 @@ int main()
 
 	auto s1{ format("Read {} bytes from {}", n, "file1.txt") };
 	auto s2{ format("Read {0} bytes from {1}", n, "file1.txt") };
-	auto s3{ format(L"ä»{1}ä¸­è¯»å–{0}ä¸ªå­—èŠ‚ã€‚", n, L"file1.txt") };
+	auto s3{ format("´Ó{1}ÖĞ¶ÁÈ¡{0}¸ö×Ö½Ú¡£", n, "file1.txt") };
+	cout<<s3<<endl;
 }
