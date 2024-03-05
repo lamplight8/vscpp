@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int day {};
+    int day{};
     cout<<"Please enter an integer(0 - 6): ";
     cin >> day;
 

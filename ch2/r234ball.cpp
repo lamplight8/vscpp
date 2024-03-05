@@ -8,19 +8,19 @@ int main()
     enum color{red, yellow, blue, white, black};
     color color1;
     int i, j, k, loop;
-    int flag = 0; //计数器
-    for (i = red; i <= black; i++)
+    int flag{0}; //计数器
+    for(i=red; i<=black; i++)
     {
-        for (j = red; j <= i; j++)
+        for(j=red; j<=i; j++)
         {
-            for (k = red; k <= j; k++)
+            for(k=red; k<=j; k++)
             {
-                if (i != j && i != k && j != k)
+                if(i!=j && i!=k && j!=k)
                 {
                     flag++;
-                    for (loop = 1; loop <= 3; loop++)
+                    for(loop=1; loop<=3; loop++)
                     {
-                        switch (loop)
+                        switch(loop)
                         {
                         case 1:
                             color1 = color(i);
@@ -34,7 +34,7 @@ int main()
                         default:
                             break;
                         }
-                        switch (color1)
+                        switch(color1)
                         {
                         case red:
                             cout << "red"<< ",";

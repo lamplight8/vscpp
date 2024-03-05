@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     bool IsLeapYear(int y);
-    int year {};
+    int year{};
     cout << format("Please enter the year: ");
     cin >> year;
 
