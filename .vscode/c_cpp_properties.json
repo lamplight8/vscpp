@@ -3,8 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${vcpkgRoot}/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -12,7 +11,7 @@
                 "_UNICODE"
             ],
             "compilerPath": "D:\\msys64\\mingw64\\bin\\gcc.exe",
-            "cStandard": "c17",
+            "cStandard": "c23",
             "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x64",
             "compilerArgs": [
