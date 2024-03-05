@@ -1,9 +1,9 @@
 #include<iostream>
-#include<boost/format.hpp>
+#include<format>
 
 using namespace std;
 int main()
 {
-        cout<<boost::format("Hello, Boost!")<<endl;
+        cout<<format("Hello, Wolrd!")<<endl;
         return 0;
 }
