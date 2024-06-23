@@ -12,6 +12,8 @@
 				"-std=c++23",
 				"-Mmodules",
 				"-o",
+				"-I",
+				"C:\\Program Files (x86)\\wxWidgets\\**",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
 			"options": {

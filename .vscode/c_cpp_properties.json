@@ -3,20 +3,23 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:\\Program Files (x86)\\wxWidgets\\**"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "D:\\msys64\\mingw64\\bin\\gcc.exe",
+            "compilerPath": "D:\\msys64\\mingw64\\bin\\g++.exe",
             "cStandard": "c23",
             "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x64",
             "compilerArgs": [
                 "-std=c++23",
-                "-Mmodules"
+                "-Mmodules",
+                "-I",
+                "D:\\wxWidgets-3.2.4\\**"
             ]
         }
     ],
